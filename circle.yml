@@ -1,0 +1,11 @@
+dependencies:
+  post:
+    - bin/cisetup
+deployment:
+  staging:
+    branch: dev
+    commands:
+      - bundle exec cap staging deploy
+test:
+  post:
+    - bundle exec rubocop
